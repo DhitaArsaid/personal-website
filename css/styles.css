@@ -11536,7 +11536,7 @@ footer .list-unstyled li a:hover {
 body.dark-mode {
   --background-color: #121212;
   --text-color: #ffffff;
-  --secondary-text-color: #aaaaaa; /* Softer text for secondary elements */
+  --secondary-text-color: #ffffff; /* Softer text for secondary elements */
   --button-bg-color: #333333; /* Darker capsule button background */
   --button-hover-bg-color: #444444;
   --link-hover-color: #1e90ff; /* Bright accent color for links */
