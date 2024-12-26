@@ -10883,7 +10883,7 @@ hr.divider-light {
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background-color: var(--navbar-bg-light);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: none;
 }
 
 #mainNav .navbar-brand {
@@ -11551,7 +11551,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: Arial, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+  transition: none;
 }
 
 /* Sections Styling */
@@ -11559,7 +11559,7 @@ section {
   background-color: var(--background-color);
   color: var(--text-color);
   padding: 1.5rem 2rem;
-  transition: background-color 0.3s, color 0.3s;
+  transition: none;
 }
 
 /* Headers and Paragraphs */
@@ -11586,7 +11586,7 @@ a:hover {
 .project-card, .skill-card, .blog-showcase-card {
   background-color: var(--card-bg-color);
   box-shadow: 0 4px 10px var(--shadow-color);
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: none;
 }
 
 .project-info, .blog-showcase-description {
@@ -11650,7 +11650,7 @@ body.dark-mode #sun-icon {
 /* Global Header Styling */
 h1, h2, h3 {
   color: var(--text-color); /* Use adaptive text color */
-  transition: color 0.3s; /* Smooth transition */
+  transition: none; /* Smooth transition */
 }
 
 /* About Section Text Styling */
@@ -11658,13 +11658,13 @@ h1, h2, h3 {
   font-size: 1rem;
   color: var(--secondary-text-color); /* Use adaptive secondary text color */
   line-height: 1.6;
-  transition: color 0.3s; /* Smooth transition */
+  transition: none; /* Smooth transition */
 }
 
 #about h2 {
   color: var(--text-color); /* Adaptive header color */
   margin-bottom: 1rem;
-  transition: color 0.3s;
+  transition: none;
 }
 
 /* Adaptive Section Headers */
@@ -11673,7 +11673,7 @@ section h2 {
   color: var(--text-color); /* Adaptive header color */
   text-align: left; /* Align text to the left */
   margin-bottom: 1rem;
-  transition: color 0.3s;
+  transition: none;
 }
 
 /* Project Section Headers */
@@ -11683,7 +11683,7 @@ section h2 {
   font-size: 2rem; /* Uniform header size */
   color: var(--text-color); /* Adaptive header color */
   margin-bottom: 2rem; /* Consistent bottom margin */
-  transition: color 0.3s;
+  transition: none;
 }
 
 /* Responsive Text Styling */
