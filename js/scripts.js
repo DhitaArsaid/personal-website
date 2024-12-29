@@ -181,22 +181,45 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.getElementById('toggle-dark-mode').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+// Initial setup: Apply dark mode based on saved preference or system preference
+const savedDarkMode = localStorage.getItem('darkMode');
+const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    // Adaptive colors for header and about us
-    const isDarkMode = document.body.classList.contains('dark-mode');
+if (savedDarkMode === 'enabled' || (!savedDarkMode && systemPrefersDark)) {
+    document.body.classList.add('dark-mode');
+    applyAdaptiveColors(true);
+}
+
+// Add event listener to toggle dark mode
+document.getElementById('toggle-dark-mode').addEventListener('click', () => {
+    const isDarkMode = document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+    applyAdaptiveColors(isDarkMode);
+});
+
+// Function to update colors for header and about section
+function applyAdaptiveColors(isDarkMode) {
     const headerText = document.querySelector('.masthead h1');
     const aboutText = document.querySelector('#about');
-    
+
     if (headerText) {
         headerText.style.color = isDarkMode ? '#ffffff' : '#000000';
     }
-    
+
     if (aboutText) {
         aboutText.style.color = isDarkMode ? '#e0e0e0' : '#333333';
     }
+}
+
+// Sync with system dark mode changes if the user hasn't set a preference
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('darkMode')) {
+        const isDarkMode = e.matches;
+        document.body.classList.toggle('dark-mode', isDarkMode);
+        applyAdaptiveColors(isDarkMode);
+    }
 });
+
 //JavaScript for Dynamic Year -->
 document.addEventListener("DOMContentLoaded", function() {
     // Set the current year in the footer
